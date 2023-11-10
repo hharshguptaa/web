@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .drinkingAnimation{
+				position: absolute;
+				width: 100%;
+				height: 650px;
+				margin: 0px 0px 0 0px;
+				background-color: white;
+			}
+			.bottleDiv{
+				position: absolute;
+				width: 200px;
+				height: 180px;
+				margin: 250px 650px 50px 500px;
+				background-color: white;
+
+				animation: tiltBottle 5s 1 linear;
+				animation-fill-mode: forwards;
+				z-index: 2;
+			}
+			@keyframes tiltBottle{
+				0%{
+				
+				}
+				20%{
+					transform: rotate(60deg);
+				}
+				80%{
+					transform: rotate(60deg);
+				}
+				100%{
+					transform: rotate(0deg);
+				}
+			}
+			.bottleNeck{
+				position: absolute;
+				width: 22px;
+				height: 100px;
+                /* border-bottom: 0px solid #555;
+	            border-left: 25px solid transparent;
+	            border-right: 25px solid transparent;
+	            height: 20px;
+	            width: 125px; */
+				margin: 0px 80px 150px 89px;
+				background-color: transparent;
+                border: 2px solid black;
+				border-radius: 20%;
+				z-index: 3;
+			}
+		
+			.bottleBall{
+				position: absolute;
+				width: 60px;
+				height: 60px;
+                border: 2px solid black;
+                border-top-width: 0px;
+				border-radius: 50%;
+				margin: 70px 70px 20px 70px;
+				background-color: rgb(129, 226, 250) ;
+				z-index: 3;
+			}
+			.bottleBody{
+				position: absolute;
+				width: 60px;
+				height: 100px;
+                border: 2px solid black;
+                border-top-width: 0px;
+				margin: 100px 70px 20px 70px;
+				background-color: rgb(129, 226, 250);
+				border-bottom-left-radius: 20%;
+				border-bottom-right-radius: 20%;
+				z-index: 3;
+                animation: empty 5s linear 4s 1 forwards fill-mode;
+			}
+			
+            .wDrops{
+				position: absolute;
+				width: 40px;
+				height: 10px;
+				margin: 295px 560px 155px 685px;
+				background-color: white;
+				border-top: 10px solid rgb(129, 226, 250);
+				border-right: 3px dashed rgb(129, 226, 250);
+				border-top-right-radius: 1000%;
+				opacity: 0;
+				animation: dropW 3s 1 linear;
+				animation-delay: 1s;
+				animation-fill-mode: forwards;
+				z-index: 1;
+			}
+			@keyframes dropW{
+				0%{
+				
+				}
+				30%{
+					height: 150px;
+					opacity: 1;
+				}
+				70%{
+					height: 150px;
+					opacity: 1;
+				}
+				100%{
+					height: 10px;
+					opacity: 0;
+					width: 0 px;
+				}
+			}
+            .glassDiv{
+				position: absolute;
+				width: 80px;
+				height: 105px;
+				margin: 455px 630px 75px 690px;
+				background-color: white;				
+				z-index: 1;
+			}
+			.glassMain{
+				position: absolute;
+				width: 50px;
+				height: 40px;
+				margin: 0 15px 80px 15px;
+				background-color: black;				
+				border-radius: 10%;
+				z-index: 3;
+			}
+			.glassBall{
+				position: absolute;
+				width: 50px;
+				height: 40px;
+				margin: 20px 15px 50px 15px;
+				border-radius: 50%;
+				background-color: black;				
+				z-index: 3;
+			}
+            .wBall{
+				position: absolute;
+				height: 35px;
+				width: 40px;
+				margin: 0px 5px 5px 5px;
+				background-color: rgb(129, 226, 250);
+				border-bottom-right-radius: 70%;
+				border-bottom-left-radius: 70%;
+				opacity: 0.5;
+				z-index: 3;
+			}
+			.uncover{
+				position: absolute;
+				height: 35px;
+				width: 40px;
+				margin: 0px 0px 0px 0px;
+				background-color: black;
+				border-bottom-right-radius: 50%;
+				border-bottom-left-radius: 50%;
+				animation: show 1.5s 1 linear;
+				animation-fill-mode: forwards;
+				animation-delay: 2s;
+				z-index: 3;
+			}
+			@keyframes show{
+				to{
+					border-bottom-right-radius: 0%;
+					border-bottom-left-radius: 0%;
+					height: 0px;
+					margin: 0px 0px 35px 0;
+				}
+			}
+            @keyframes empty{
+                0%{
+                    background-color: rgb(129, 226, 250);
+
+                }
+                100%{
+                    background-color: white;
+                }
+                
+            }
+    </style>
+
+</head>
+<body>
+   
+    <div class="drinkingAnimation">
+        <div class="bottleDiv">
+            <div class="bottleNeck"></div>
+            <div class="bottleBall"></div>
+            <div class="bottleBody"></div>
+            <!-- <div class="bottleLabel"> -->
+                <div class="withinLabel"></div>
+            </div>
+        </div>
+        <div class="wDrops"></div>
+        <div class="bottleShadow"></div>
+        <div class="glassDiv">
+            <div class="glassMain"></div>
+            <div class="glassBall">
+                <div class="wBall">
+                    <div class="uncover"></div>
+                </div>
+            </div>
+            <!-- <div class="glassStem"></div>
+            <div class="glassStand"></div> -->
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Lunar Eclipse Animation</title>
+     <style>
+         body {
+             margin: 0;
+             overflow: hidden;
+             background-color: #090202;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             height: 100vh;
+         }
+         
+         .earth {
+             width: 200px;
+             height: 200px;
+             background-image: url('https://th.bing.com/th/id/OIP.lC8RV5Xf6PSWNJ06ZTbfggHaEK?pid=ImgDet&rs=1');
+             background-color: #ffffff;
+             border-radius: 50%;
+             position: relative;  <!-- relative mtlb so that it can move>
+             animation: rotate 0s linear infinite;
+             box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+         }
+         
+         .moon {
+             width: 200px;
+             height: 200px;
+             background-color: #000000;
+             border-radius: 50%;
+             position: absolute;
+             top: 50%;
+             left: 0;
+             transform: translate(-50%, -50%);
+             animation: orbit 20s linear infinite;
+             /* box-shadow: 0 0 20px rgba(197, 197, 197, 0.5); */
+         }
+         
+         @keyframes rotate {
+             0% {
+                 transform: rotate(0deg);
+             }
+             100% {
+                 transform: rotate(360deg);
+             }
+         }
+         
+         @keyframes orbit {
+             0% {
+                 transform: translate(-50%, -50%) rotate(0deg) translateX(100px);
+             }
+             100% {
+                 transform: translate(-50%, -50%) rotate(360deg) translateX(100px);
+             }
+         }
+
+         
+     </style>
+ </head>
+ <body>
+     <div class="earth">
+         <div class="moon"></div>
+     </div>
+     
+ </body>
+ </html>
+ 
+

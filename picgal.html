@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Magazine</title>
+    <style>
+        /* CSS for larger devices */
+        @media (min-width: 992px) {
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .gallery img {
+                width: 33.33%;
+            }
+        }
+
+        /* CSS for medium range devices */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .gallery img {
+                width: 50%;
+            }
+        }
+
+        /* CSS for lower range devices */
+        @media (max-width: 767px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Photo Magazine</h1>
+    <nav>
+        <a href="#gallery">Go to Photo Gallery</a>
+    </nav>
+
+    <div id="gallery" class="gallery">
+        <!-- Add your images here -->
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <!-- More images... -->
+    </div>
+</body>
+</html>

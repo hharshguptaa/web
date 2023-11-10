@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body
+    { background-color:yellow;
+        margin: 0px;
+    }
+    .container
+    {
+        background-color:green;
+        width: 850px;
+        height: 1000px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .road1,.road2,.road3,.road4
+    {
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        background-color: black;
+        border: 3px dashed white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: azure;
+    }
+    .road1{
+        top: 0%;
+        left: 0%;
+        display: flex;
+        
+        }
+    .road2{
+        top: 0%;
+        left: 25%;
+      
+    }
+    .road3{
+        top: 0%;
+        left: 50%;
+       
+    }
+    .road4{
+        top: 0%;
+        left: 75%;
+       
+    }
+
+    .v1,.v2,.v3,.v4
+    {
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        right: 55%;
+        align-items: center;
+        justify-content: center;
+    }
+    #c1{
+        transform: rotate(270deg);
+         }
+
+         #c2
+         {
+            transform: rotate(90deg);
+
+         }
+         #c3
+         {
+            transform: rotate(90deg)        
+         }
+
+         #c4
+         {
+            transform: rotate(270deg);
+
+         }
+         #c5
+         {
+            transform: rotate(270deg);
+         }
+    .v1{
+        animation: vehicle 8s linear infinite;
+       
+    }
+    .v2{
+       
+        animation: vehicle 2s linear infinite;
+    }
+    .v3{
+       
+        animation: vehicle 4.5s linear infinite;
+    }
+    .v4{
+        
+        animation: vehicle 3s linear infinite;
+    }
+
+    .v5
+    {
+        position: absolute;
+        width: 30px;
+        height: 50px;
+        left: 75%;
+    
+        align-items: center;
+        justify-content: center;
+        animation: second 6s linear infinite;
+       
+    }
+
+    @keyframes second {
+        from{
+            transform: translate(-100px,450px);
+        }
+        to
+        {
+            transform: translate(-100px,-450px);
+        }
+    }
+
+    @keyframes vehicle {
+        from{
+            transform: translate(0,450px);
+        }
+        to
+        {
+            transform: translate(0,-450px);
+        }
+        
+    }
+   
+
+</style>
+</head>
+<body>
+  
+<div class="container">
+    <div class="road1">40 KMPH
+            <div class="v5"><img src="top4.png" id="c5" height="50px"></div>
+    </div>
+    <div class="road2">50 KMPH<div class="v3"><img src="top3.png" id="c3" height="50px"></div></div>
+    <div class="road3">60 KMPH<div class="v4"><img src="top4.png" id="c4" height="50px"></div></div>
+    <div class="road4">80 KMPH<div class="v2"><img src="top2.png" id="c2" height="50px"></div></div>
+</div>   
+</body>
+</html>

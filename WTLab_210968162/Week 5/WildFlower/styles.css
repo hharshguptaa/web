@@ -1,0 +1,39 @@
+/* Reset some default browser styles */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Create a container to center the elements */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This will make the container take up the full viewport height */
+    background-color: black;
+    position: relative; /* Enable relative positioning for child elements */
+}
+
+/* Style the 'F' in the center */
+.center {
+    font-size: 150px; /* Adjust the size as needed */
+    color: yellow; /* Change this to your desired color */
+}
+
+/* Style the 'wild' text at the top left */
+.top-left {
+    position: absolute;
+    top: 38%; /* Adjust the top position as needed */
+    left: 40%; /* Adjust the left position as needed */
+    color: blue; /* Change this to your desired color */
+    font-size: 30px; /* Adjust the size as needed */
+}
+
+/* Style the 'lowers' text at the bottom right */
+.bottom-right {
+    position: absolute;
+    bottom: 39%; /* Adjust the bottom position as needed */
+    right: 36%; /* Adjust the right position as needed */
+    color: red; /* Change this to your desired color */
+    font-size: 30px; /* Adjust the size as needed */
+}

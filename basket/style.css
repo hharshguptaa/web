@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    /* background-color: black; */
+}
+
+.box{
+    border-bottom:solid black 10px;
+   
+    width: 1200px;
+
+}
+
+.sun {
+    width: 50px;
+    height: 50px;
+    background: red;
+    margin-top: 400px;
+    position: relative;
+    border-radius: 100%;
+    border: solid rgb(255, 255, 255) 1px;
+    animation: mymove 5s infinite, /* name duration timing funct delay iteration count and fill mode */
+               drop 7.5s infinite 5s;
+}
+.img img{
+    position: relative;
+    top:500px;
+    width: 100px;
+    height: 100px;
+ 
+}
+
+@keyframes drop{
+    
+    from {
+        margin-left:0px;
+        transform:
+        translateX(0) translateY(0)
+     
+    }
+    60% {
+        transform: 
+        translateX(75.5rem) translateY(0)
+        rotate(45deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(39rem) translateY(1801rem);
+        animation-delay: 4s;
+        opacity: 0;
+    }
+}

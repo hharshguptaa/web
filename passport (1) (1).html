@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Registration</title>
+    <style>
+        h1{
+            background: gray;
+            color: blue;
+        }
+        .important-information-bold{
+            margin: 0;
+        }
+        .marked-with-this{
+            padding-top: 2em;
+            padding-left: 1em;
+        }
+        .container-info{
+            display: flex;
+            padding-right: 2em;
+        }
+        .container-registertoapply-this{
+            display: flex;
+        }
+        .checkbox-this{
+            padding-top: 1em;
+            padding-left: 3em;
+        }
+        .aftercheckbox-warning{
+            padding-top: .8em;
+            padding-left: 1em;
+        }
+        .container-passportofficeloc{
+            display: flex;
+        }
+        .passportofficeenter{
+            padding-top: 1em;
+            padding-left: 2em;
+
+        }
+        .container-givenname{
+            display: flex;
+        }
+        .givenname-tb{
+            padding-top: 1em;
+            padding-left: .4em;
+        }
+        .container-surname{
+            display: flex;
+        }
+        .surname-tb{
+            padding-top: 1em;
+            padding-left: 2.2em;
+        }
+        .container-DOB{
+            display: flex;
+        }
+        .DOB-tb{
+            padding-top: 1em;
+            padding-left: 3.7em;
+        }
+        .container-emailid{
+            display: flex;
+        }
+        .email-tb{
+            padding-top: 1em;
+            padding-left: 1.7em;
+        }
+        .doyouwanttext{
+            padding-left: -.4em;
+        }
+        .doyouwant{
+            display: flex;
+        }
+        .radiofordoyou{
+            padding-top: 1em;
+            padding-left: .5em;
+        }
+        .loginidcont{
+            display: flex;
+        }
+        .loginid{
+            padding-top: 1em;
+            padding-left: 7.2em;
+        }
+        .passwordcont{
+            display: flex;
+        }
+        .password{
+
+            padding-top: .8em;
+            padding-left: 6.5em;
+        }
+        .confpasswordcont{
+            display: flex;
+        }
+        .confpassword{
+           padding-top: 1em;
+           padding-left: 3em;
+        }
+        img{
+            width: 200px;
+        }
+        .register{
+            padding-top: 2em;
+            
+        }
+        .submitbutton{
+            background: blue;
+            color: white;
+            font-weight: bold;
+        }
+        .clearall{
+            background: blue;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://techstory.in/wp-content/uploads/2018/06/Passport-Seva.jpg" alt="passportsevaimage">
+    <h1 >User Registration</h1>
+    <section>
+        <div class="container-info">
+            <div class="important-information-bold">
+            <p style="font-weight: bold;">Important Information:</p> <p>Passport application can be processed at any PSK/POPSK/PSLK WITHIN INDIA irrespective of your residential address.</p>
+            </div>
+            <div class="marked-with-this">
+                <p style="font-weight: lighter;">fields marked with (<b style="color: red;">*</b>) are mandatory</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="click-here-this">
+            <ul>
+            <li>    
+            <p><a href="https://portal1.passportindia.gov.in/AppOnlineProject/online/apptAvailStatus">Click Here</a> to check the appointment availability at all PSK/POPSK/PSLK</p>
+            </li>
+            <li>
+            <p><a href="https://portal2.passportindia.gov.in/AppOnlineProject/pdf/CIR_0186917_Y.pdf">Click Here</a>  to know more about Apply Anywhere in India scheme for Passport Services.</p>
+            </li>
+            </ul>        
+        </div>
+    </section>
+    <section>
+        <div class="container-registertoapply-this">
+            <div>
+                <p>register to apply at<b style="color: red;">*</b></p>
+            </div>
+            <div class="checkbox-this">
+                <input type="radio" id="CPVdelhi" name="CPVdelhi">
+                <label for="CPVdelhi"> CPV Delhi</label><br>
+                <input type="radio" id="PassportOffice" name="PassportOffice">
+                <label for="PassportOffice">Passport Office</label>
+            </div>
+            <div class="aftercheckbox-warning">
+                  <p style="font-size: x-small;">Select the 'CPV Delhi' option to apply for Diplomatic/Official passport at Consular, Passport and Visa (CPV) division, Delhi.</p>
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="container-passportofficeloc">
+            <div class="justthepassportofficename">
+                 <p>Passport Office<b style="color: red;">*</b></p>
+                 <p style="font-size: x-small;">(As per Present Residential Address)</p>
+            </div>
+            <div class="passportofficeenter">
+                <input type="text" id="passportofficesub" name="passportofficesub">
+                
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-givenname">
+            <div class="givenname">
+                 <p>Given name <span style="font-size: x-small;">(Max 45 Characters)</span><b style="color: red;">*</b></p>
+            </div>
+            <div class="givenname-tb">
+                <input type="text" id="givennametb" name="givennametb">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-surname">
+              <div class="surname">
+                     <p>Surname <span style="font-size: x-small;">(Max 45 Characters)</span></p>
+              </div>
+              <div class="surname-tb">
+                <input type="text" id="surnametb" name="surnametb">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-DOB">
+              <div class="DOB">
+                     <p>DOB <span style="font-size: x-small;" >(DD/MM/YYYY)</span><b style="color: red;">*</b></p>
+              </div>
+              <div class="DOB-tb">
+                <input type="text" id="DOBtb" name="DOBtb" placeholder="DD/MM/YYYY">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-emailid">
+              <div class="emailid">
+                     <p>Email-Id <span style="font-size: x-small;" >(Max 35 Characters)</span><b style="color: red;">*</b></p>
+              </div>
+              <div class="email-tb">
+                <input type="email" id="emailthis" name="emailthis">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="doyouwant">
+             <div class="doyouwanttext">
+                <p>Do you want your Login-id <br>to be same as emailid</p>
+             </div>
+             <div class="radiofordoyou">
+                <input type="radio" id="yes" name="yes">
+                <label for="yes"> Yes</label>
+                <input type="radio" id="NO" name="NO">
+                <label for="NO">No</label>
+             </div>
+        </div>
+    </section>
+    <section>
+        <div class="loginidcont">
+        <div class="loginidplain">   
+            <p>LoginId <b style="color: red;">*</b></p>
+        </div>
+        <div class="loginid">
+            <input type="email" id="loginidthis" name="loginidthis">
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="passwordcont">
+        <div class="passplain">   
+            <p>Password <b style="color: red;">*</b></p>
+        </div>
+        <div class="password">
+            <input type="password" id="passthis" name="passthis">
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="confpasswordcont">
+        <div class="confpassplain">   
+            <p> Confirm Password <b style="color: red;">*</b></p>
+        </div>
+        <div class="confpassword">
+            <input type="password" id="confpassthis" name="confpassthis">
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="containerofcharacterdisp">
+            <div class="enterchar">
+                <p>Enter the characters displayed in the image:</p>
+            </div>
+            <div class="imageofchar">
+           <img src="https://cdn.w600.comps.canstockphoto.com/nixie-stock-photos_csp15179536.jpg" alt="character to be">
+        </div>
+        <div class="entercharnow">
+         <input type="text">
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="register">
+          <input type="submit" id="register" name="register" class="submitbutton" value="Register">
+          <button type="reset" class="clearall">Clear</button>
+        </div>
+    </section>
+    
+</body>
+</html>

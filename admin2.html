@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Passport Application Form</title>
+    <style>
+      .passwordcont {
+        display: flex;
+      }
+      .password {
+        padding-top: 0.8em;
+        padding-left: 6.5em;
+      }
+      .confpasswordcont {
+        display: flex;
+      }
+      .confpassword {
+        padding-top: 1em;
+        padding-left: 3em;
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://techstory.in/wp-content/uploads/2018/06/Passport-Seva.jpg"
+      alt="passportsevaimage"
+    />
+    <h1>Passport Application Form</h1>
+    <form action="submit-form.php" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Full Name:</label><br />
+        <input type="text" id="name" name="name" /><br /><br />
+        <label for="dob">Date of Birth:</label><br />
+        <input type="date" id="dob" name="dob" /><br /><br />
+        <label for="gender">Gender:</label><br />
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="address">Address:</label><br />
+        <textarea id="address" name="address"></textarea><br /><br />
+        <label for="phone">Phone Number:</label><br />
+        <input type="tel" id="phone" name="phone" /><br /><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Passport Information</legend>
+        <label for="type">Type of Passport:</label><br />
+        <select id="type" name="type">
+          <option value="">--Please choose an option--</option>
+          <option value="ordinary">Ordinary Passport</option>
+          <option value="diplomatic">Diplomatic Passport</option>
+          <option value="official">Official Passport</option>
+          <option value="emergency">Emergency Certificate</option>
+          <option value="certificate_of_identity">
+            Certificate of Identity
+          </option></select
+        ><br /><br />
+
+        <label for="">Reason for Applying:</label><br />
+        <input type="radio" id="" name="" value="" />
+        <label for="">New Passport</label><br />
+        <section>
+          <div class="passwordcont">
+            <div class="passplain">
+              <p>Password <b style="color: red">*</b></p>
+            </div>
+            <div class="password">
+              <input type="password" id="passthis" name="passthis" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="confpasswordcont">
+            <div class="confpassplain">
+              <p>Confirm Password <b style="color: red">*</b></p>
+            </div>
+            <div class="confpassword">
+              <input type="password" id="confpassthis" name="confpassthis" />
+            </div>
+          </div>
+        </section>
+      </fieldset>
+    </form>
+
+    ...
+  </body>
+</html>

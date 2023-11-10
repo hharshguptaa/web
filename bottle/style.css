@@ -1,0 +1,153 @@
+.glass{
+    border: 1px solid black;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100px;
+    height: 200px;
+    margin: auto;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 30% 30% 0% 0%;
+}
+
+.container{
+    border: 1px solid black;
+    display: block;
+    position: relative;
+    top:425px;
+    left:300px;
+    width:100px;
+    height: 200px;
+    margin: auto;
+    animation: pour 5s ease-in-out infinite;
+    border-radius: 30% 30% 0% 0%;
+}
+
+@keyframes pour{
+    0%{
+        transform: translateY(-520px)  translateX(-100px);
+        border-top: 10px solid black;
+    }
+    50%{
+        transform: translateY(-520px) translateX(-100px);
+        border-top: 1px solid black;
+    }
+    70%{
+        transform: translateY(-660px) translateX(-200px) rotate(-90deg) ;
+    }
+    85%{
+        transform: translateY(-520px)  translateX(-100px);
+    }
+    100%{
+        border-top: 10px solid black;
+        transform: translateY(-520px)  translateX(-100px);
+    }
+}
+
+.water{
+    background-color: blue;
+    width:100px;
+    position: relative;
+    top:50px;
+    height:150px;
+    animation: dec 5s linear infinite;
+    z-index: 0;
+}
+
+.top1{
+    display: block;
+    position: relative;
+}
+
+.water1{
+    display: block;
+    position: relative;
+    background-color: blue;
+    width: 100px;
+    height: 150px;
+    margin: auto;
+    top:400px;
+    animation: inc 5s linear infinite;
+}
+
+.table{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height:300px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top:601px;
+    z-index: 2;
+}
+.bottom{
+    background-color: white;
+    z-index: 2;
+}
+
+@keyframes inc{
+    0%{
+        transform: translateY(-100px);
+    }
+    60%{
+        transform: translateY(-100px);
+    }
+    70%{
+        transform: translateY(-210px);
+    }
+    100%{
+        transform: translateY(-210px);
+    }
+}
+
+@keyframes dec {
+    0%{
+        top: 50px;
+    }
+    60%{
+        top:50px;
+        height: 150px;
+    }
+    70%{
+        top:150px;
+        height: 50px;
+    }
+    100%{
+        top:150px;
+        height: 50px;
+    }
+}
+
+.flow{
+    display: block;
+    width: 50px;
+    height: 90px;
+    background-color: blue;
+    border-radius: 50%;
+    top:-290px;
+    position: relative;
+    left:460px;
+    animation: inv 5s linear infinite;
+}
+
+@keyframes inv {
+    0%{
+        opacity: 0%;
+    }
+    60%{
+        opacity: 0%;
+    }
+    65%{
+        opacity: 50%;
+    }
+    81%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
